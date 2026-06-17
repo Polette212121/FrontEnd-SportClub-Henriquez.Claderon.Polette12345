@@ -1,0 +1,292 @@
+/* ============================================
+   LANDING PAGE ESPECÍFICOS
+   ============================================ */
+
+/* HERO SECTION */
+.hero {
+  background-image: url("https://i.blogs.es/df1685/biceps/840_560.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--primary-white);
+  padding: 100px 20px;
+  text-align: center;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-gold);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+    font-size: 1.4rem;
+    margin-bottom: 3rem;
+    color: rgba(242, 245, 239, 0.986);
+    font-weight: bold;
+}
+
+/* BENEFICIOS */
+.beneficios {
+    padding: 80px 20px;
+    background-color: var(--bg-light);
+}
+
+.beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.beneficio-card {
+    background-color: var(--primary-white);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.beneficio-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(46, 26, 71, 0.15);
+}
+
+.beneficio-card .icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.beneficio-card h3 {
+    color: var(--primary-dark);
+    margin-bottom: 0.5rem;
+}
+
+.beneficio-card p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+/* PLANES */
+.planes {
+  padding: 80px 20px;
+  background-image: url("https://puroimpacto.com/wp-content/uploads/2021/03/Como-levantar-mas-peso-en-el-gimnasio-progresivamente-1-scaled.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--primary-dark);
+}
+
+
+.planes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.plan-card {
+    background-color: var(--primary-white);
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    padding: 2.5rem;
+    text-align: center;
+    transition: var(--transition);
+    position: relative;
+}
+
+.plan-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(221, 208, 238, 0.2);
+}
+
+.plan-card.destacado {
+    border-color: var(--primary-gold);
+    box-shadow: 0 8px 20px rgba(242, 183, 5, 0.2);
+    transform: scale(1.05);
+}
+
+.plan-card.destacado:hover {
+    transform: scale(1.05) translateY(-8px);
+}
+
+.plan-card h3 {
+    color: var(--primary-dark);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.plan-card .price {
+    font-size: 2.5rem;
+    color: var(--primary-gold);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.plan-card .price span {
+    font-size: 1rem;
+    color: var(--text-light);
+}
+
+.beneficios-lista {
+    list-style: none;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.beneficios-lista li {
+    padding: 0.75rem 0;
+    color: var(--text-light);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.beneficios-lista li:last-child {
+    border-bottom: none;
+}
+
+.badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary-gold);
+    color: var(--primary-dark);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+/* SOBRE EL CLUB */
+.sobre-club {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, rgba(46, 26, 71, 0.05) 0%, rgba(242, 183, 5, 0.05) 100%);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+}
+
+.about-section {
+    background-color: var(--primary-white);
+    padding: 2rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--primary-gold);
+}
+
+.about-section h3 {
+    color: var(--primary-dark);
+    margin-bottom: 1rem;
+}
+
+.about-section p {
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+/* FOOTER */
+.footer {
+    background-color: var(--primary-dark);
+    color: var(--primary-white);
+    padding: 3rem 20px 1.5rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h4 {
+    color: var(--primary-gold);
+    margin-bottom: 1rem;
+}
+
+.footer-section p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-section a:hover {
+    color: var(--primary-gold);
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.5rem;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(242, 183, 5, 0.1);
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    background-color: var(--primary-gold);
+    color: var(--primary-dark);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(242, 183, 5, 0.2);
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero {
+        padding: 80px 20px;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .plan-card.destacado {
+        transform: scale(1);
+    }
+
+    .plan-card.destacado:hover {
+        transform: translateY(-8px);
+    }
+
+    .beneficios-grid,
+    .planes-grid,
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,268 @@
+/* ============================================
+   VARIABLES Y ESTILOS GLOBALES
+   ============================================ */
+
+:root {
+    --primary-dark: #2E1A47;
+    --primary-gold: #F2B705;
+    --primary-white: #FFFFFF;
+    --text-dark: #1a1a1a;
+    --text-light: #666666;
+    --bg-light: #f8f9fa;
+    --border-color: #e0e0e0;
+    --success: #4CAF50;
+    --error: #f44336;
+    --warning: #ff9800;
+    --info: #2196F3;
+    
+    /* Dashboard Colors */
+    --user-blue: #3498db;
+    --coach-green: #27ae60;
+    --admin-red: #e74c3c;
+    
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    background-color: var(--primary-white);
+}
+
+/* ============================================
+   CONTENEDOR
+   ============================================ */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ============================================
+   TIPOGRAFÍA
+   ============================================ */
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    color: var(--text-light);
+}
+
+a {
+    color: var(--primary-dark);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--primary-gold);
+}
+
+/* ============================================
+   BOTONES
+   ============================================ */
+
+.btn {
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: var(--transition);
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: var(--primary-gold);
+    color: var(--primary-dark);
+}
+
+.btn-primary:hover {
+    background-color: #d4a604;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(242, 183, 5, 0.3);
+}
+
+.btn-secondary {
+    background-color: var(--primary-dark);
+    color: var(--primary-white);
+}
+
+.btn-secondary:hover {
+    background-color: #1a0f27;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(46, 26, 71, 0.3);
+}
+
+.btn-success {
+    background-color: var(--success);
+    color: var(--primary-white);
+}
+
+.btn-success:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+.btn-error {
+    background-color: var(--error);
+    color: var(--primary-white);
+}
+
+.btn-error:hover {
+    background-color: #da190b;
+    transform: translateY(-2px);
+}
+
+.btn-small {
+    padding: 8px 16px;
+    font-size: 0.875rem;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+
+.header {
+    background-color: var(--primary-dark);
+    color: var(--primary-white);
+    padding: 1.5rem 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    height: 60px;
+    width: auto;
+    display: block;
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-menu a {
+    color: var(--primary-white);
+    font-weight: 500;
+    transition: var(--transition);
+    position: relative;
+}
+
+.nav-menu a:hover {
+    color: var(--primary-gold);
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-gold);
+    transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+.btn-login {
+    background-color: var(--primary-gold);
+    color: var(--primary-dark) !important;
+    padding: 8px 24px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+/* ============================================
+   UTILIDADES
+   ============================================ */
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--primary-dark);
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: var(--primary-gold);
+    margin: 1rem auto;
+    border-radius: 2px;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+}
