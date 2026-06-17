@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Usuario - SportClub</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body class="dashboard dashboard-usuario">
+    
+    <!-- HEADER -->
+    <header class="dashboard-header user-header">
+        <div class="header-container">
+            <div class="logo">
+                <h2>🏋️ SportClub</h2>
+            </div>
+            <div class="header-actions">
+                <button class="header-btn" id="miPerfil">👤 Mi Perfil</button>
+                <a href="../index.html" class="header-btn btn-logout">🚪 Cerrar Sesión</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div class="dashboard-container">
+        
+        <!-- NAVEGACIÓN LATERAL -->
+        <nav class="dashboard-nav user-nav">
+            <ul>
+                <li><a href="#inicio" class="nav-link active">🏠 Inicio</a></li>
+                <li><a href="#reservas" class="nav-link">📅 Reservas</a></li>
+                <li><a href="#clases" class="nav-link">🎯 Clases</a></li>
+                <li><a href="#perfil" class="nav-link">👤 Mi Perfil</a></li>
+            </ul>
+        </nav>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="dashboard-content">
+            
+            <!-- SECCIÓN 1: BIENVENIDA -->
+            <section id="inicio" class="dashboard-section">
+                <div class="welcome-card">
+                    <h1>Bienvenido, <span id="nombreUsuario">Usuario</span> 👋</h1>
+                    <p id="mensajeMoti">Continúa entrenando para alcanzar tus metas.</p>
+                </div>
+            </section>
+
+            <!-- SECCIÓN 2: MIS RESERVAS (mínimo 5) -->
+            <section id="reservas" class="dashboard-section">
+                <h2>📅 Mis Reservas</h2>
+                <p class="section-subtitle">Lista de tus entrenamientos reservados</p>
+                <div class="table-container">
+                    <table class="dashboard-table">
+                        <thead>
+                            <tr>
+                                <th>Nombre Clase</th>
+                                <th>Día</th>
+                                <th>Hora</th>
+                                <th>Coach Asignado</th>
+                                <th>Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody id="reservasTabla">
+                            <!-- Se llena con JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- SECCIÓN 3: CLASES DISPONIBLES (mínimo 3) -->
+            <section id="clases" class="dashboard-section">
+                <h2>🎯 Clases Disponibles</h2>
+                <p class="section-subtitle">Descubre todas nuestras clases y reserva la tuya</p>
+                <div class="clases-grid" id="clasesGrid">
+                    <!-- Se llena con JavaScript -->
+                </div>
+            </section>
+
+            <!-- SECCIÓN 4: PERFIL RÁPIDO -->
+            <section id="perfil" class="dashboard-section">
+                <h2>👤 Mi Perfil</h2>
+                <div class="profile-card">
+                    <div class="profile-info">
+                        <div class="profile-item">
+                            <span class="profile-label">Nombre</span>
+                            <span class="profile-value" id="perfilNombre">-</span>
+                        </div>
+                        <div class="profile-item">
+                            <span class="profile-label">Correo</span>
+                            <span class="profile-value" id="perfilEmail">-</span>
+                        </div>
+                        <div class="profile-item">
+                            <span class="profile-label">Deporte Favorito</span>
+                            <span class="profile-value" id="perfilDeporte">-</span>
+                        </div>
+                        <div class="profile-item">
+                            <span class="profile-label">Miembro desde</span>
+                            <span class="profile-value" id="perfilFecha">-</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="../js/auth.js"></script>
+    <script src="../js/dashboard-usuario.js"></script>
+
+</body>
+</html>

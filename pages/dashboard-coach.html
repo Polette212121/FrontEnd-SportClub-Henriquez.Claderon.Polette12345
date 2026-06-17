@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Coach - SportClub</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body class="dashboard dashboard-coach">
+    
+    <!-- HEADER -->
+    <header class="dashboard-header coach-header">
+        <div class="header-container">
+            <div class="logo">
+                <h2>🏋️ SportClub</h2>
+            </div>
+            <div class="header-actions">
+                <button class="header-btn" id="miPerfil">👤 Mi Perfil</button>
+                <a href="../index.html" class="header-btn btn-logout">🚪 Cerrar Sesión</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div class="dashboard-container">
+        
+        <!-- NAVEGACIÓN LATERAL -->
+        <nav class="dashboard-nav coach-nav">
+            <ul>
+                <li><a href="#inicio" class="nav-link active">🏠 Inicio</a></li>
+                <li><a href="#alumnos" class="nav-link">👥 Alumnos</a></li>
+                <li><a href="#clases" class="nav-link">📚 Clases</a></li>
+                <li><a href="#horarios" class="nav-link">⏰ Horarios</a></li>
+            </ul>
+        </nav>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="dashboard-content">
+            
+            <!-- SECCIÓN 1: PANEL RESUMEN -->
+            <section id="inicio" class="dashboard-section">
+                <h2>📊 Panel de Control</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalAlumnos">0</div>
+                        <div class="stat-label">Total Alumnos</div>
+                        <div class="stat-icon">👥</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="clasesActivas">0</div>
+                        <div class="stat-label">Clases Activas</div>
+                        <div class="stat-icon">📚</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="horasSem">0h</div>
+                        <div class="stat-label">Horas Semanales</div>
+                        <div class="stat-icon">⏰</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN 2: LISTA DE ALUMNOS (mínimo 5) -->
+            <section id="alumnos" class="dashboard-section">
+                <h2>👥 Mis Alumnos</h2>
+                <p class="section-subtitle">Gestiona tus alumnos registrados</p>
+                <div class="table-container">
+                    <table class="dashboard-table">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Correo</th>
+                                <th>Clase Asignada</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody id="alumnosTabla">
+                            <!-- Se llena con JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- SECCIÓN 3: CLASES ASIGNADAS (mínimo 3) -->
+            <section id="clases" class="dashboard-section">
+                <h2>📚 Mis Clases</h2>
+                <p class="section-subtitle">Clases que impartes</p>
+                <div class="clases-coach-grid" id="clasesCoachGrid">
+                    <!-- Se llena con JavaScript -->
+                </div>
+            </section>
+
+            <!-- SECCIÓN 4: HORARIOS DE LA SEMANA (mínimo 5) -->
+            <section id="horarios" class="dashboard-section">
+                <h2>⏰ Horarios de la Semana</h2>
+                <p class="section-subtitle">Calendario de tus entrenamientos</p>
+                <div class="horarios-container">
+                    <div class="table-container">
+                        <table class="dashboard-table horarios-table">
+                            <thead>
+                                <tr>
+                                    <th>Nombre Clase</th>
+                                    <th>Día</th>
+                                    <th>Hora</th>
+                                    <th>Cantidad Alumnos</th>
+                                </tr>
+                            </thead>
+                            <tbody id="horariosTabla">
+                                <!-- Se llena con JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="../js/auth.js"></script>
+    <script src="../js/dashboard-coach.js"></script>
+
+</body>
+</html>
